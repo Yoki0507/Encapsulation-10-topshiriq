@@ -58,10 +58,10 @@ class BankAccount:
         else:
             print("Yetarli mablag yoq!")
 
-obj=BankAccount("Qodirali",1000000)
+obj=BankAccount("Qodirali",1500000)
 print("Balans:",obj.get_balance())
 obj.deposit(50000)
-obj.withdraw(200000)
+obj.withdraw(900000)
 print("Oxirgi balans:",obj.get_balance())
 # 5 topshiriq
 class Car:
@@ -71,18 +71,18 @@ class Car:
     def get_model(self):
         return self.__model
 
-car=Car("Tesla")
+car=Car("Ferrari")
 print(car.get_model())
 # 6 topshiriq
 class Account:
     def __init__(self,password):
         self.__password=password
 
-    def check_password(self,pwd):
+    def parol(self,pwd):
         return self.__password==pwd
 
 akkaunt=Account("mypassword")
-print(akkaunt.check_password("mypassword"))  
+print(akkaunt.parol("mypassword"))  
 # 7 topshiriq
 # 8 topshiriq
 # 9 topshiriq
@@ -98,5 +98,5 @@ class LoginSystem:
         else:
             print("notogri username yoki password")
 
-sistema=LoginSystem("admin","1234")
-print(sistema.login("admin","1234"))
+sistema=LoginSystem("Qodirali","0705")
+print(sistema.login("Qodirali","0705"))
