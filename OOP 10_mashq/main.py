@@ -24,7 +24,45 @@ print(oj.get_age())
 oj.set_age(25)
 print(oj.get_age())    
 # 3 topshiriq
+class User:
+    def __init__(self,age):
+        self.__age=age
+
+    def get_age(self):
+        return self.__age
+
+    def setter(self):
+        if self.__age>0:
+            return f"Notogri"
+        else:
+            return f"Togri"
+
+data=int(input("Yoshingizni kiriting: "))
+user=User(data)
+print(user.setter())
 # 4 topshiriq
+class BankAccount:
+    def __init__(self, owner, balance):
+        self.owner=owner
+        self.__balance=balance 
+
+    def get_balance(self):
+        return self.__balance
+
+    def deposit(self,amount):
+        self.__balance+=amount
+
+    def withdraw(self, amount):
+        if amount<=self.__balance:
+            self.__balance-=amount
+        else:
+            print("Yetarli mablag yoq!")
+
+obj=BankAccount("Qodirali",1000000)
+print("Balans:",obj.get_balance())
+obj.deposit(50000)
+obj.withdraw(200000)
+print("Oxirgi balans:",obj.get_balance())
 # 5 topshiriq
 class Car:
     def __init__(self,model):
@@ -49,7 +87,6 @@ print(akkaunt.check_password("mypassword"))
 # 8 topshiriq
 # 9 topshiriq
 # 10 topshiriq
-
 class LoginSystem:
     def __init__(self, username, password):
         self.__username=username
